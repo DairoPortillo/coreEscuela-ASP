@@ -1,0 +1,5 @@
+
+obj/Debug/netcoreapp3.1/coreEscuela.AssemblyInfoInputs.cache
+*.cache
+.vscode/launch.json
+.vscode/tasks.json
