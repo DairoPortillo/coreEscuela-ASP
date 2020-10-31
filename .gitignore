@@ -3,3 +3,13 @@ obj/Debug/netcoreapp3.1/coreEscuela.AssemblyInfoInputs.cache
 *.cache
 .vscode/launch.json
 .vscode/tasks.json
+bin/Debug/netcoreapp3.1/coreEscuela.deps.json
+bin/Debug/netcoreapp3.1/coreEscuela.dll
+bin/Debug/netcoreapp3.1/coreEscuela.pdb
+bin/Debug/netcoreapp3.1/coreEscuela.exe
+bin/Debug/netcoreapp3.1/coreEscuela.runtimeconfig.dev.json
+bin/Debug/netcoreapp3.1/coreEscuela.runtimeconfig.json
+obj/Debug/netcoreapp3.1/coreEscuela.csproj.FileListAbsolute.txt
+obj/Debug/netcoreapp3.1/coreEscuela.dll
+obj/Debug/netcoreapp3.1/coreEscuela.exe
+obj/Debug/netcoreapp3.1/coreEscuela.pdb
