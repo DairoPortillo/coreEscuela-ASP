@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using Util;
 
 namespace CoreEscuela.Entidades
 {
     public class Escuela
     {
+        public string UniqueId { get; private set; } = System.Guid.NewGuid().ToString();
         string nombre;
 
         public string Nombre
@@ -47,9 +49,7 @@ namespace CoreEscuela.Entidades
 
             try
             {
-                System.Console.WriteLine("==================================");
-                System.Console.WriteLine($"Cursos de la Escuela {this.nombre}");
-                System.Console.WriteLine("==================================");
+                Printer.DibujarTitulo($"Cursos de escuela {this.Nombre}");
 
                 foreach (var Curso in this.Cursos)
                 {
@@ -68,9 +68,7 @@ namespace CoreEscuela.Entidades
 
             try
             {
-                System.Console.WriteLine("==================================");
-                System.Console.WriteLine($"Cursos de la Escuela {this.nombre}");
-                System.Console.WriteLine("==================================");
+                Printer.DibujarTitulo($"Cursos de escuela {this.Nombre}");
 
                 foreach (var Curso in this.CursosList)
                 {
