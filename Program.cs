@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CoreEscuela.Entidades;
 
 namespace coreEscuela
@@ -13,15 +14,33 @@ namespace coreEscuela
             escuela.Ciudad = "Toronto";
             escuela.TipoEscuela = TiposEscuela.Secundaria;
 
-            // Curso[] arregloCursos = {
-            //     new Curso {Nombre = "101"},
-            //     new Curso {Nombre = "201"},
-            //     new Curso {Nombre = "301"}
-            // };
+            
+            var listaCursos = new List<Curso>(){
+                new Curso {Nombre = "101"},
+                new Curso {Nombre = "201"},
+                new Curso {Nombre = "301"}
+            };
 
-            // escuela.Cursos = arregloCursos;
+
+            Curso[] arregloCursos = {
+                new Curso {Nombre = "101"},
+                new Curso {Nombre = "201"},
+                new Curso {Nombre = "301"}
+            };
+
+            escuela.Cursos = arregloCursos;
+            escuela.CursosList = listaCursos;
+
+            Curso temporal = new Curso{Nombre = "401", Jornada = TiposJornada.Tarde};
+
+            escuela.CursosList.Add(temporal);
+            escuela.CursosList.Remove(temporal);
+
+            //remueve un objeto de lista haciendo match
+            escuela.CursosList.RemoveAll(obj => obj.Nombre == "201");
 
             escuela.imprimirCursos();
+            escuela.imprimirCursosList();
         }
     }
 }
