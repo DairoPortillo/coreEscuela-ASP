@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using coreEscuela.Entidades;
 using CoreEscuela;
 using CoreEscuela.Entidades;
 using CoreEscuela.Util;
@@ -14,7 +16,11 @@ namespace coreEscuela
             var engine = new EscuelaEngine();
             engine.Inicializar();
 
-            Printer.WriteTitle("Pruebas de polimorfismosssssssss");
+            var listaObjetos = engine.TraerObjetosEscuela();
+
+            var listaILugar = from obj in listaObjetos 
+                                where obj is ILugar
+                                select (ILugar) obj;
         }
     }
 }
