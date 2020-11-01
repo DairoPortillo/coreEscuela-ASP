@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace CoreEscuela.Entidades
 {
     class Escuela
@@ -18,6 +20,8 @@ namespace CoreEscuela.Entidades
         public TiposEscuela TipoEscuela { get; set; }
 
         public Curso[] Cursos { get; set; }
+
+        public List<Curso> CursosList { get; set; }
 
         //constructor
         public Escuela(string nombreConstructor, int año)
@@ -46,8 +50,29 @@ namespace CoreEscuela.Entidades
                 System.Console.WriteLine("==================================");
                 System.Console.WriteLine($"Cursos de la Escuela {this.nombre}");
                 System.Console.WriteLine("==================================");
-                
+
                 foreach (var Curso in this.Cursos)
+                {
+                    System.Console.WriteLine($"Nombre: {Curso.Nombre}, Id: {Curso.UniqueId}, Jornada: {Curso.Jornada}");
+                }
+            }
+            catch (System.Exception)
+            {
+
+                System.Console.WriteLine("Escuela no tiene cursos");
+            }
+        }
+
+        public void imprimirCursosList()
+        {
+
+            try
+            {
+                System.Console.WriteLine("==================================");
+                System.Console.WriteLine($"Cursos de la Escuela {this.nombre}");
+                System.Console.WriteLine("==================================");
+
+                foreach (var Curso in this.CursosList)
                 {
                     System.Console.WriteLine($"Nombre: {Curso.Nombre}, Id: {Curso.UniqueId}, Jornada: {Curso.Jornada}");
                 }
