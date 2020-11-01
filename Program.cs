@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using CoreEscuela;
 using CoreEscuela.Entidades;
+using CoreEscuela.Util;
 
 namespace coreEscuela
 {
@@ -12,6 +13,8 @@ namespace coreEscuela
             // Console.WriteLine("Hello World!");
             var engine = new EscuelaEngine();
             engine.Inicializar();
+
+            Printer.WriteTitle("Pruebas de polimorfismosssssssss");
         }
     }
 }

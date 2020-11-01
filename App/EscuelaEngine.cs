@@ -5,6 +5,7 @@ using CoreEscuela.Entidades;
 
 namespace CoreEscuela
 {
+    ///sealed = clase sellada para no permitir heredar
     public sealed class EscuelaEngine
     {
         public Escuela Escuela { get; set; }
