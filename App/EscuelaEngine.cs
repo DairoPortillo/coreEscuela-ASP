@@ -15,6 +15,18 @@ namespace CoreEscuela
 
         }
 
+        public Dictionary<string, IEnumerable<ObjetoEscuelaBase>> getDiccionarioObjetos(){
+
+
+            var diccionario = new Dictionary<string, IEnumerable<ObjetoEscuelaBase>>();
+
+            diccionario.Add("Escuela", new List<ObjetoEscuelaBase> { Escuela });
+            diccionario.Add("Cursos", Escuela.Cursos);
+
+            return diccionario;
+
+        }
+
         public void Inicializar()
         {
             Escuela = new Escuela("Platzi Academay", 2012, TiposEscuela.Primaria,
